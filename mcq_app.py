@@ -7,6 +7,9 @@ from nltk.corpus import stopwords
 from nltk import pos_tag
 
 import nltk
+nltk.data.path.append("/home/adminuser/.nltk_data")
+
+import nltk
 import os
 
 # Set custom download path for nltk_data inside the current directory
@@ -20,8 +23,7 @@ if not os.path.exists(os.path.join(NLTK_DATA_DIR, "corpora/stopwords")):
 if not os.path.exists(os.path.join(NLTK_DATA_DIR, "taggers/averaged_perceptron_tagger")):
     nltk.download('averaged_perceptron_tagger', download_dir=NLTK_DATA_DIR)
 
-import nltk
-nltk.data.path.append("/home/adminuser/.nltk_data")
+
 
 nltk.download('stopwords')
 nltk.download('averaged_perceptron_tagger')
